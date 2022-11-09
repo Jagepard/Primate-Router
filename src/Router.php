@@ -46,7 +46,7 @@ class Router
 
                 if ($requestUri === $uri) {
                     if ($route["TARGET"] instanceof \Closure) {
-                        (is_array($params)) ? new $route["TARGET"](...$params) : $route["TARGET"]($params);
+                        (is_array($params)) ? $route["TARGET"](...$params) : $route["TARGET"]($params);
                         return;
                     }
 
