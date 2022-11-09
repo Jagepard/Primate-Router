@@ -82,7 +82,7 @@ class RouterTest extends PHPUnit_Framework_TestCase
     public function testCallableWithParams(): void
     {
         $_SERVER["REQUEST_URI"]    = "/closure/john";
-        $_SERVER["REQUEST_METHOD"] = "GET";
+        $_SERVER["REQUEST_METHOD"] = "POST";
 
         $router = new Router();
         $requestUri = explode('/', trim(parse_url($_SERVER["REQUEST_URI"])["path"], '/'));
@@ -90,7 +90,7 @@ class RouterTest extends PHPUnit_Framework_TestCase
 
         $router->addRoute("/closure/{name}", function ($name) {
             echo "Closure $name";
-        });
+        }, "POST");
 
         $router->matchRoute($requestUri);
 
