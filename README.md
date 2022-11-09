@@ -9,6 +9,15 @@ use Primate\Router\Router;
 
 $router = new Router();
 ```
+Далее обязательно разбираем "REQUEST_URI"
+```php
+$requestUri = explode('/', trim(parse_url($_SERVER["REQUEST_URI"])["path"], '/'));
+```
+
+После добавления всех маршрутов вызываем метод сопоставление маршрутов с данными запроса "REQUEST_URI"
+```php
+$router->matchRoute($requestUri);
+```
 
 ## Добавление маршрутов:
 
