@@ -78,4 +78,22 @@ class RouterTest extends PHPUnit_Framework_TestCase
 
         $this->expectOutputString('Closure');
     }
+
+    public function testCallableWithParams(): void
+    {
+        $_SERVER["REQUEST_URI"]    = "/closure/john";
+        $_SERVER["REQUEST_METHOD"] = "GET";
+
+        $router = new Router();
+        $requestUri = explode('/', trim(parse_url($_SERVER["REQUEST_URI"])["path"], '/'));
+
+
+        $router->addRoute("/closure/{name}", function ($name) {
+            echo "Closure $name";
+        });
+
+        $router->matchRoute($requestUri);
+
+        $this->expectOutputString('Closure john');
+    }
 }
