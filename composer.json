@@ -1,9 +1,9 @@
 {
     "name"             : "primate/router",
-    "description"      : "Primitive framework",
+    "description"      : "Primitive router",
     "type"             : "library",
     "keywords"         : [
-        "rudra",
+        "primate",
         "router",
         "routing",
         "rest-router",
