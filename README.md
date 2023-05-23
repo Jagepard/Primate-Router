@@ -1,4 +1,6 @@
 [![PHPunit](https://github.com/Jagepard/Primate-Router/actions/workflows/php.yml/badge.svg)](https://github.com/Jagepard/Primate-Router/actions/workflows/php.yml)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Jagepard/Primate-Router/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Jagepard/Primate-Router/?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/fc0ca23a4f55e6ed264f/maintainability)](https://codeclimate.com/github/Jagepard/Primate-Router/maintainability)
 [![License: MIT](https://img.shields.io/badge/license-MIT-498e7f.svg)](https://mit-license.org/)
 
 # Primate-Router
