@@ -1,3 +1,6 @@
+[![PHPunit](https://github.com/Jagepard/Primate-Router/actions/workflows/php.yml/badge.svg)](https://github.com/Jagepard/Primate-Router/actions/workflows/php.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-498e7f.svg)](https://mit-license.org/)
+
 # Primate-Router
 
 ### Прмиитивный маршрутизатор, для упрощения понимания логики. | [API](https://github.com/Jagepard/Primate-Router/blob/master/api.md "Documentation API")
