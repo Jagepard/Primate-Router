@@ -1,6 +1,6 @@
 # Primate-Router
 
-### Прмиитивный маршрутизатор, для упрощения понимания логики.
+### Прмиитивный маршрутизатор, для упрощения понимания логики. | [API](https://github.com/Jagepard/Primate-Router/blob/master/api.md "Documentation API")
 
 Использование:
 

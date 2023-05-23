@@ -11,6 +11,17 @@ class Router
 {
     private array $routes;
 
+    /**
+     * Adds a route
+     * ------------
+     * Добавляет маршрут
+     *
+     * @param  string         $uri
+     * @param  array|callable $target
+     * @param  string         $requestMethod
+     * @param  string|null    $name
+     * @return void
+     */
     public function addRoute(string $uri, array|callable $target, string $requestMethod = "GET", string $name = null): void
     {
         $this->routes[] = [
@@ -21,6 +32,14 @@ class Router
         ];
     }
 
+    /**
+     * Matches a request with a route
+     * ------------------------------
+     * Сопоставляет запрос с маршрутом
+     *
+     * @param  array $requestUri
+     * @return void
+     */
     public function matchRoute(array $requestUri): void
     {
         foreach ($this->routes as $route) {
@@ -59,6 +78,16 @@ class Router
         http_response_code(404);
     }
 
+    /**
+     * Calls the required controller method
+     * ------------------------------------
+     * Вызывает необходимый метод контроллера
+     *
+     * @param  $params
+     * @param  $action
+     * @param  $controller
+     * @return void
+     */
     protected function callAction($params, $action, $controller): void
     {
         if (!isset($params)) {
