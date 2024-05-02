@@ -37,7 +37,7 @@ $router->addRoute("/closure", function () {
 В случае перехода по адресу /closure/john в браузере,
 в окне будет отображено "Hello john!"
 ```php
-$router->addRoute("/closure{name}", function ($name) {
+$router->addRoute("/closure/:name", function ($name) {
     echo "Hello $name!";
 });
 ```
