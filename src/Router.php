@@ -51,7 +51,7 @@ class Router
 
                 for ($i = 0; $i < $count; $i++) {
                     // Looking for a match with a pattern {...}
-                    if (preg_match('/{([a-zA-Z0-9_]*?)}/', $routeUri[$i]) !== 0) {
+                    if (preg_match('/:([a-zA-Z0-9_]*?)/', $routeUri[$i]) !== 0) {
                         if (array_key_exists($i, $requestUri)) {
                             $uri[] = $requestUri[$i];
                             $params[] = $requestUri[$i];

@@ -88,7 +88,7 @@ class RouterTest extends PHPUnit_Framework_TestCase
         $requestUri = explode('/', trim(parse_url($_SERVER["REQUEST_URI"])["path"], '/'));
 
 
-        $router->addRoute("/closure/{name}", function ($name) {
+        $router->addRoute("/closure/:name", function ($name) {
             echo "Closure $name";
         }, "POST");
 
